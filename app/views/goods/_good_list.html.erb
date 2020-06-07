@@ -4,8 +4,12 @@
     <%# if item.image_flag %>
       <%#= link_to (image_tag(item.image_flag, style: "width: 70px;height: 100px;display: inline-block;")), item.url %>
       <%#end%>
-      <img src="<%= item['smallImageUrls'][0] %>">
-      <a href="<%= item.url %>"><%= item.name %></a>
+      <table>
+        <tr>
+          <td><a href="<%= item.url %>"><img src="<%= item['mediumImageUrls'][0] %>"></a></td>
+          <td><a href="<%= item.url %>"><%= item.name %></a></td>
+        </tr>
+      </table>
     </div>
   <% end %>
 <% end %>
